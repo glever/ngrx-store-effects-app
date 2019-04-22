@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
 import { StoreModule } from "@ngrx/store";
-import {EffectsModule} from "@ngrx/effects";
+import { EffectsModule } from "@ngrx/effects";
 
 // components
 import * as fromComponents from "./components";
@@ -24,11 +24,11 @@ export const ROUTES: Routes = [
     component: fromContainers.ProductsComponent
   },
   {
-    path: ":id",
+    path: "new",
     component: fromContainers.ProductItemComponent
   },
   {
-    path: "new",
+    path: ":pizzaId",
     component: fromContainers.ProductItemComponent
   }
 ];
