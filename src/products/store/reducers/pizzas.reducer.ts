@@ -63,6 +63,16 @@ export function reducer(
         entities
       };
     }
+
+    case fromPizzas.REMOVE_PIZZA_SUCCESS: {
+      const pizza = action.payload;
+      // destructure: ...entities will be all except the 'removed'
+      const { [pizza.id]: removed, ...entities } = state.entities;
+      return {
+        ...state,
+        entities
+      };
+    }
   }
   return state;
 }
